@@ -1,0 +1,25 @@
+.SignIn {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(206, 206, 206, 0.884);
+  
+  .background {
+    // background-image: url("../../images/cool-background.png");
+    // background-size: inherit;
+    background-color: #142ebf;
+    height: 700px;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+  }
+  .signInForm {
+    height: 700px;
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    right: 400px;
+  }
+  
+}
+
