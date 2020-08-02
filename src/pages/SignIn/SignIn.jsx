@@ -9,6 +9,8 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import FormControl from '@material-ui/core/FormControl';
+import SignInForm from '../../components/Forms/SignInForm/SignInForm';
+import SignUpForm from '../../components/Forms/SignUpForm/SignUpForm';
 
 import Button from '@material-ui/core/Button';
 
@@ -17,9 +19,12 @@ class SignIn extends React.Component {
       super()
       this.state = {
         password: '',
-        showPassword: false
+        showPassword: false,
+        signInForm: true,
       }
     }
+
+    handleForm = () => this.setState({ signInForm: !this.state.signInForm})
 
     handleChange = (event) => {
       console.log('WARTOSC', event.target.value)
@@ -30,59 +35,18 @@ class SignIn extends React.Component {
       this.setState({ showPassword: !this.state.showPassword })
     };
   
-   
-
   render() {
     return (
       <div className="sign-in">
         <div className="background"></div>
         <div className="sign-in-form-wrap">
-          <div className="sign-in-form">
-            <div className="formHeader">
-              <h1>
-              Welcome To SecuKeys!
-              </h1>
-              <p>
-              Sign in by entering the informations below
-              </p>
-            </div>
-            <div>
-              <TextField
-                id="outlined-password-input"
-                label="Login"
-                type="text"
-                variant="outlined"
-              />
-            </div>
-            <div>
-              <FormControl variant="outlined" className="password-input">
-                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                <OutlinedInput
-                  id="outlined-adornment-password"
-                  type={this.state.showPassword ? 'text' : 'password'}
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={this.handleClickShowPassword}
-                        edge="end"
-                      >
-                        {this.state.showPassword ? <Visibility /> : <VisibilityOff />}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  labelWidth={70}
-                />
-              </FormControl>
-              <p>Forgotten Password</p>
-            </div>
-          <Button variant="contained" color="primary" className="form-button">
-            Primary
-          </Button>
-          </div>
+          {this.state.signInForm ?
+            <SignInForm />
+          :
+            <SignUpForm />
+          }
         </div>
+        <button onClick={() => this.setState({ signInForm: !this.state.signInForm })}>CHANGE ME</button>
       </div>
     ) 
   }
