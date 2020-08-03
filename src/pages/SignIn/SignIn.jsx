@@ -38,15 +38,14 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="sign-in">
-        <div className="background"></div>
         <div className="sign-in-form-wrap">
           {this.state.signInForm ?
             <SignInForm />
           :
             <SignUpForm />
           }
+          <button onClick={() => this.setState({ signInForm: !this.state.signInForm })}>CHANGE ME</button>
         </div>
-        <button onClick={() => this.setState({ signInForm: !this.state.signInForm })}>CHANGE ME</button>
       </div>
     ) 
   }

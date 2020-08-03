@@ -73,7 +73,8 @@ class SignInForm extends React.Component {
               </FormControl>
               <p>Forgotten Password</p>
             </div>
-          <Button variant="contained" color="primary" className="form-button">
+          {/* <Button variant="outlined" color="primary" className="form-button"> */}
+          <Button variant="outlined" color="primary">
             Primary
           </Button>
       </div>

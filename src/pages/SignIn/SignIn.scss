@@ -1,29 +1,25 @@
 .sign-in {
-  padding: 50px;
+  // padding: 50px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: rgba(206, 206, 206, 0.884);
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("../../images/Man of Steel.jpg");
+  background-image: url("../../images/KingYna.jpg");
 
-    .background {
-      // background-image: url("../../images/cool-background.png");
-      // background-size: inherit;
-      background-color: #34387c;
-      height: 800px;
-      width: 60%;
-      border-radius: 15px;
-      position: relative;
-    }
+  background: #780206;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
     .sign-in-form-wrap {
       height: 800px;
       width: 500px;
-      background-color: white;
-      position: absolute;
-      right: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      
 
 
         .sign-in-form {
@@ -34,11 +30,16 @@
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
-          h1 {
-            color: #4b83ff;
+          color: white;
+
+          .MuiInputLabel-outlined {
+            color: white;
+          }
+
+          .MuiOutlinedInput-notchedOutline {
+            border-color: white;
           }
         }
-
         .form-button {
           background-color: #4b83ff;
           width: 350px;
