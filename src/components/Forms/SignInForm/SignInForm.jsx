@@ -17,6 +17,7 @@ class SignInForm extends React.Component {
       super()
       this.state = {
         password: '',
+        login:'',
         showPassword: false
       }
     }
@@ -47,6 +48,7 @@ class SignInForm extends React.Component {
                 label="Login"
                 type="text"
                 variant="outlined"
+                onChange={(e) => this.setState({ login: e.target.value })}
               />
             </div>
             <div>
@@ -74,7 +76,7 @@ class SignInForm extends React.Component {
               <p>Forgotten Password</p>
             </div>
           {/* <Button variant="outlined" color="primary" className="form-button"> */}
-          <Button variant="outlined" color="primary">
+          <Button disabled={!(this.state.password && this.state.login)} variant="outlined" color="secondary">
             Primary
           </Button>
       </div>

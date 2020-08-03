@@ -10,15 +10,18 @@
   // background-image: url("../../images/Man of Steel.jpg");
   // background-image: url("../../images/KingYna.jpg");
 
-  // background: #780206;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to bottom, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to bottom, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #780206;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   // background: #03001e;  /* fallback for old browsers */
   // background: -webkit-linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  background-color: #092240;
+  background: linear-gradient(to bottom, #1e525a, #0c1a21);
+
+
+  // background-color: #092240;
     .sign-in-form-wrap {
       height: 800px;
       width: 500px;
