@@ -70,13 +70,33 @@
           .MuiOutlinedInput-notchedOutline {
             border-color: white;
           }
+
+          .password-link {
+            height: 30px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            .reset-link {
+              text-decoration: none;
+              color: white;
+              font-size: small;
+              transition: 1s;
+              &:hover {
+                color: #ff00ae;
+                transition: 1s;
+              }
+            }
+          }
+
         }
+
         .form-button {
           background-color: #4b83ff;
           width: 350px;
           height: 50px;
           box-sizing: border-box;
         }
+
     }
     input {
       width: 350px;

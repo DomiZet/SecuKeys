@@ -74,8 +74,10 @@ class SignInForm extends React.Component {
                   labelWidth={70}
                 />
               </FormControl>
-              <div>
-                <Link to="/reset-password">Forgotten Password</Link>
+              <div className="password-link">
+                <Link to="/reset-password" className="reset-link">
+                Forgotten Password
+                </Link>
               </div>
             </div>
           {/* <Button variant="outlined" color="primary" className="form-button"> */}
