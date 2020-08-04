@@ -62,6 +62,7 @@ class SignInForm extends React.Component {
                   endAdornment={
                     <InputAdornment position="end">
                       <IconButton
+                        className="eye-icon"
                         aria-label="toggle password visibility"
                         onClick={this.handleClickShowPassword}
                         edge="end"
@@ -73,11 +74,13 @@ class SignInForm extends React.Component {
                   labelWidth={70}
                 />
               </FormControl>
-              <p>Forgotten Password</p>
+              <div>
+                <Link to="/reset-password">Forgotten Password</Link>
+              </div>
             </div>
           {/* <Button variant="outlined" color="primary" className="form-button"> */}
           <Button disabled={!(this.state.password && this.state.login)} variant="outlined" color="secondary">
-            Primary
+            Sign In
           </Button>
       </div>
     ) 

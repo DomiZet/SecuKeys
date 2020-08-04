@@ -11,7 +11,6 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import FormControl from '@material-ui/core/FormControl';
 import SignInForm from '../../components/Forms/SignInForm/SignInForm';
 import SignUpForm from '../../components/Forms/SignUpForm/SignUpForm';
-
 import Button from '@material-ui/core/Button';
 
 class SignIn extends React.Component {
@@ -44,7 +43,7 @@ class SignIn extends React.Component {
           :
             <SignUpForm />
           }
-          <button onClick={() => this.setState({ signInForm: !this.state.signInForm })}>CHANGE ME</button>
+          <Button className="change-form" variant="outlined" size="large" color="primary" onClick={() => this.setState({ signInForm: !this.state.signInForm })}>{this.state.signInForm ? 'Sign Up' : 'Sign In'}</Button>
         </div>
       </div>
     ) 
