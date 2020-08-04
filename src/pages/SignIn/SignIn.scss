@@ -46,7 +46,7 @@
           border-image-slice: 1;
           animation: display 1s;
           text-align: center;
-
+          padding: 0 20px;
 
           &:before {
             position: absolute;
@@ -103,6 +103,8 @@
       height: 50px;
       box-sizing: border-box;
       color: #00d0bd;
+
+      
     }
     .password-input{
       width: 350px;
@@ -158,5 +160,17 @@
   100% {
     // opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sign-in {
+    .sign-in-form-wrap {
+      width: unset;
+    }
+
+    input, .password-input {
+      width: 240px;
+    }
   }
 }
