@@ -1,53 +1,41 @@
-import React from 'react';
-import './SignIn.scss';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import FormControl from '@material-ui/core/FormControl';
-import SignInForm from '../../components/Forms/SignInForm/SignInForm';
-import SignUpForm from '../../components/Forms/SignUpForm/SignUpForm';
-import Button from '@material-ui/core/Button';
+import React, { Component } from 'react'
+import Button from '@material-ui/core/Button'
+import SignInForm from '../../components/Forms/SignInForm/SignInForm'
+import SignUpForm from '../../components/Forms/SignUpForm/SignUpForm'
+import './SignIn.scss'
 
-class SignIn extends React.Component {
-    constructor() {
-      super()
-      this.state = {
-        password: '',
-        showPassword: false,
-        signInForm: true,
-      }
+class SignIn extends Component {
+  constructor() {
+    super()
+    this.state = {
+      displaySignInForm: true
     }
+  }
 
-    handleForm = () => this.setState({ signInForm: !this.state.signInForm})
-
-    handleChange = (event) => {
-      console.log('WARTOSC', event.target.value)
-      this.setState({ password: event.target.value })
-    }
-
-    handleClickShowPassword = () => {
-      this.setState({ showPassword: !this.state.showPassword })
-    };
+  handleFormChange = () => this.setState({ displaySignInForm: !this.state.displaySignInForm })
   
   render() {
+    const { displaySignInForm } = this.state
     return (
-      <div className="sign-in">
-        <div className="sign-in-form-wrap">
-          {this.state.signInForm ?
+      <div className="SignIn">
+        <div className="sign-in-container">
+          {displaySignInForm ?
             <SignInForm />
           :
             <SignUpForm />
           }
-          <Button className="change-form" variant="outlined" size="large" color="primary" onClick={() => this.setState({ signInForm: !this.state.signInForm })}>{this.state.signInForm ? 'Sign Up' : 'Sign In'}</Button>
+          <Button 
+            className="change-form" 
+            variant="outlined" 
+            size="large"
+            onClick={this.handleFormChange}
+          >
+            {displaySignInForm ? 'Sign Up' : 'Sign In'}
+          </Button>
         </div>
       </div>
     ) 
   }
 }
 
-export default SignIn;
+export default SignIn

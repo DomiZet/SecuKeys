@@ -1,5 +1,4 @@
-.sign-in {
-  // padding: 50px;
+.SignIn {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,22 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-image: url("../../images/Man of Steel.jpg");
-  // background-image: url("../../images/KingYna.jpg");
-
-  // background: #780206;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to bottom, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to bottom, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // background: #03001e;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   background: linear-gradient(to bottom, #1e525a, #0c1a21);
-
-
   background-color: #092240;
-    .sign-in-form-wrap {
+
+    .sign-in-container {
       height: 800px;
       width: 500px;
       display: flex;
@@ -30,8 +17,7 @@
       align-items: center;
       justify-content: space-around;
 
-      
-        .sign-in-form, .SignUpForm {
+      .sign-in-form, .SignUpForm {
           border: 10px solid;
           height: 550px;
           width: inherit;
@@ -144,21 +130,13 @@
 }
 
 @keyframes display {
-  // 0% {
-  //   opacity: 0;
-  // }
-  // 100% {
-  //   opacity: 1;
-  // }
   0% {
-    // opacity: 0;
     transform: scale(1);
   }
   50% {
     transform: scale(0.8);
   }
   100% {
-    // opacity: 1;
     transform: scale(1);
   }
 }
