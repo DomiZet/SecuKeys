@@ -45,9 +45,9 @@ class SignUpForm extends React.Component {
     return (
       <div className="SignUpForm">
         {/* <div className="signInForm"> */}
-            <div className="formHeader">
+            <div className="form-header">
                 <h1>
-                Let's get starded
+                Let's get started
                 </h1>
                 Sign up by entering the informations below
             </div>
