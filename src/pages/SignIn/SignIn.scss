@@ -1,13 +1,11 @@
+@import '../../Styles';
+
 .SignIn {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: rgba(206, 206, 206, 0.884);
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #1e525a, #0c1a21);
-  background-color: #092240;
+  background: linear-gradient(to bottom, $dark-teal, $very-dark-teal);
 
     .sign-in-container {
       height: 800px;
@@ -25,10 +23,10 @@
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
-          color: white;
+          color: $white;
           position: relative;
           z-index: 100;
-          border-image: linear-gradient(to right, #00d0bd 0%, #ff00ae 100%);
+          border-image: linear-gradient(to right, $teal 0%, $pink 100%);
           border-image-slice: 1;
           animation: display 1s;
           text-align: center;
@@ -50,11 +48,11 @@
           }
 
           .MuiInputLabel-outlined {
-            color: white;
+            color: $white;
           }
 
           .MuiOutlinedInput-notchedOutline {
-            border-color: white;
+            border-color: $white;
           }
 
           .password-link {
@@ -64,33 +62,36 @@
             align-items: flex-end;
             .reset-link {
               text-decoration: none;
-              color: white;
+              color: $white;
               font-size: small;
               transition: 1s;
               &:hover {
-                color: #ff00ae;
+                color: $pink;
                 transition: 1s;
               }
             }
           }
 
+          .confirm-terms {
+            .Mui-checked {
+              color: $teal;
+            }
+            .MuiSwitch-track {
+              background-color: $white;
+            }
+            .Mui-checked + .MuiSwitch-track {
+              background-color: $white;
+            }
+          }
         }
-
-        .form-button {
-          background-color: #4b83ff;
-          width: 350px;
-          height: 50px;
-          box-sizing: border-box;
-        }
-
     }
+
     input {
       width: 350px;
       height: 50px;
       box-sizing: border-box;
-      color: #00d0bd;
+      color: $teal;
 
-      
     }
     .password-input{
       width: 350px;
@@ -99,18 +100,18 @@
     }
 
     .eye-icon {
-      color: white;
+      color: $white;
     }
 
     .change-form {
-      border-color: #00d0bd;
-      color: #00d0bd;
+      border-color: $teal;
+      color: $teal;
       width: 110px;
 
 
       &:hover {
-        background-color: #00d0bd;
-        color: white;
+        background-color: $teal;
+        color: $white;
 
       }
     }

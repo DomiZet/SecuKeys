@@ -1,11 +1,12 @@
-import React from 'react';
-import SignIn from './pages/SignIn/SignIn';
+import React from 'react'
+import SignIn from './pages/SignIn/SignIn'
 import {
   BrowserRouter as Router,
   Route,
-} from "react-router-dom";
-import Welcome from './pages/Welcome/Welcome';
-import ResetPassword from './pages/ResetPassword/ResetPassword';
+} from "react-router-dom"
+import Welcome from './pages/Welcome/Welcome'
+import ResetPassword from './pages/ResetPassword/ResetPassword'
+import './Styles.scss'
 
 function App() {
   return (
@@ -23,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
