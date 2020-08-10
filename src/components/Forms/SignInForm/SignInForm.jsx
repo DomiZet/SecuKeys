@@ -9,6 +9,7 @@ import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
 import FormControl from '@material-ui/core/FormControl'
 import Button from '@material-ui/core/Button'
+import './SignInForm.scss'
 
 class SignInForm extends Component {
     constructor() {
